@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/colorPrimary"/>
+    <corners android:radius="12dp"/>
+    <elevation android:value="4dp"/>
+    <shadow android:type="linear"
+        android:color="#000000"
+        android:alpha="0.5"
+        android:width="4dp"
+        android:height="4dp"/>
+    <color xmlns:android="http://schemas.android.com/apk/res/android"/>
+</shape>

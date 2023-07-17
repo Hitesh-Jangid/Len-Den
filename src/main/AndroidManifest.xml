@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/im_budget"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.hiteshjangid.lenden.expenseincome.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hiteshjangid.lenden.expenseincome.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.hiteshjangid.lenden.expenseincome.BudgetActivity"
+            android:label="@string/title_activity_budget" >
+        </activity>
+        <activity
+            android:name="com.hiteshjangid.lenden.expenseincome.ExpenseActivity"
+            android:label="@string/title_activity_expense" >
+        </activity>
+        <activity
+            android:name="com.hiteshjangid.lenden.expenseincome.SavingsActivity"
+            android:label="@string/title_activity_savings" >
+        </activity>
+        <activity
+            android:name="com.hiteshjangid.lenden.expenseincome.ReportsActivity"
+            android:label="@string/title_activity_reports" >
+        </activity>
+        <activity
+            android:name="com.hiteshjangid.lenden.expenseincome.ResetActivity"
+            android:label="@string/title_activity_reset" >
+        </activity>
+        <activity
+            android:name="com.hiteshjangid.lenden.expenseincome.SummaryActivity"
+            android:label="@string/title_activity_summary" >
+        </activity>
+    </application>
+
+</manifest>

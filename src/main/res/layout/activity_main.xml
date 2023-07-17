@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/button_back_white"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_back"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/home_title"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/available_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_title"
+        android:layout_alignParentStart="false"
+        android:background="@drawable/button_back"
+        android:layout_marginVertical="10dp"
+        android:padding="10dp"
+        android:text="@string/available_budget"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_title"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/available_budget"
+        android:background="@drawable/button_back"
+        android:padding="10dp"
+        android:text="@string/cash"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/available_budget"
+        android:background="@drawable/button_back_white"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/summary"
+        android:textColor="#4A4A51"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:columnCount="3"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/budget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_back"
+            android:src="@drawable/im_budget" />
+
+        <ImageButton
+            android:id="@+id/expenses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_back"
+            android:src="@drawable/im_expenses" />
+
+        <ImageButton
+            android:id="@+id/savings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_back"
+            android:src="@drawable/im_savings" />
+
+        <ImageButton
+            android:id="@+id/reports"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_back"
+            android:src="@drawable/im_reports" />
+
+        <ImageButton
+            android:id="@+id/bills"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_back"
+            android:src="@drawable/im_bills" />
+
+    </GridLayout>
+
+
+</RelativeLayout>
