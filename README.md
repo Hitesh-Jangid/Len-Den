@@ -175,7 +175,7 @@
 
 ## 📋 **Project Structure**
 
-<div align="center">
+<div align="left">
 
 ```
 📁 Len-Den/
