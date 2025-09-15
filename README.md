@@ -197,9 +197,9 @@
 
 ### 🎁 **Latest Release: v1.0.0**
 
-[![Download APK](https://img.shields.io/badge/Download-APK%20(1.9MB)-brightgreen?style=for-the-badge&logo=android)](https://github.com/Hitesh-Jangid/Len-Den/releases/latest)
+[![Download APK](https://img.shields.io/badge/Download-APK%20(1.88MB)-brightgreen?style=for-the-badge&logo=android)](https://github.com/Hitesh-Jangid/Len-Den/releases/latest/download/app-release-unsigned.apk)
 
-**📱 Size:** 1.9 MB | **📅 Released:** September 15, 2025  
+**📱 Size:** 1.88 MB | **📅 Released:** September 15, 2025  
 **🔧 Compatibility:** Android 8.0+ (API 26+)
 
 </div>
