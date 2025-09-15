@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/book"
+    tools:context="com.hiteshjangid.lenden.MainActivity">
+
+    <!-- Guidelines for Content Alignment -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="10dp" />
+
+    <!-- Main Title Card with Enhanced Elevation and Styling -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/home_title_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="?attr/colorPrimaryContainer"
+        app:cardBackgroundColor="?attr/colorSurface"
+        style="?attr/materialCardViewElevatedStyle"
+        app:layout_constraintEnd_toEndOf="@id/guide_right"
+        app:layout_constraintStart_toStartOf="@id/guide_left"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        android:contentDescription="Len-Den Budget App Main Screen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/home_title"
+                style="@style/TextAppearance.Material3.HeadlineLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/home_title"
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="Welcome to Len-Den Budget Manager" />
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:background="?attr/colorSecondary"
+                android:backgroundTint="?attr/colorPrimaryContainer"
+                android:contentDescription="Decorative accent line" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Budget Status Card with Enhanced Visual Appeal -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/budget_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorOutlineVariant"
+        app:cardBackgroundColor="?attr/colorSecondaryContainer"
+        style="?attr/materialCardViewElevatedStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_title_card"
+        android:minHeight="48dp"
+        android:contentDescription="Current budget status information">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/available_budget"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/available_budget"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textStyle="bold"
+            android:contentDescription="Available budget amount display" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Summary Card with Enhanced Interaction -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/summary_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:rippleColor="?attr/colorPrimary"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorPrimary"
+        app:cardBackgroundColor="?attr/colorPrimaryContainer"
+        style="?attr/materialCardViewElevatedStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/budget_card"
+        android:minHeight="48dp"
+        android:contentDescription="View financial summary and reports">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/summary"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/summary"
+            android:textColor="?attr/colorOnPrimaryContainer"
+            android:textStyle="bold"
+            android:contentDescription="Financial summary button" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Enhanced Navigation Grid with Sophisticated Card Design -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/navigation_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="16dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="?attr/colorOutlineVariant"
+        app:cardBackgroundColor="?attr/colorSurface"
+        style="?attr/materialCardViewElevatedStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/summary_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <!-- Budget Navigation Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/budget_nav_card"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:rippleColor="?attr/colorPrimary"
+                app:strokeWidth="2dp"
+                app:strokeColor="?attr/colorPrimaryContainer"
+                app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                style="?attr/materialCardViewElevatedStyle"
+                app:layout_constraintBottom_toTopOf="@+id/reports_nav_card"
+                app:layout_constraintEnd_toStartOf="@+id/expenses_nav_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:minHeight="48dp"
+                android:contentDescription="Navigate to budget management section">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/budget"
+                        style="@style/Widget.Material3.Button.IconButton.Filled"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginBottom="12dp"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:icon="@drawable/im_budget"
+                        app:iconGravity="textStart"
+                        app:iconSize="36dp"
+                        app:iconTint="?attr/colorOnPrimary"
+                        android:contentDescription="Budget management icon" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.Material3.LabelLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Budget"
+                        android:textColor="?attr/colorOnPrimaryContainer"
+                        android:textStyle="bold"
+                        android:contentDescription="Budget section label" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Expenses Navigation Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/expenses_nav_card"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:rippleColor="?attr/colorSecondary"
+                app:strokeWidth="2dp"
+                app:strokeColor="?attr/colorSecondaryContainer"
+                app:cardBackgroundColor="?attr/colorSecondaryContainer"
+                style="?attr/materialCardViewElevatedStyle"
+                app:layout_constraintBottom_toTopOf="@+id/income_reports_nav_card"
+                app:layout_constraintEnd_toStartOf="@+id/income_nav_card"
+                app:layout_constraintStart_toEndOf="@+id/budget_nav_card"
+                app:layout_constraintTop_toTopOf="parent"
+                android:minHeight="48dp"
+                android:contentDescription="Navigate to expense tracking section">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/expenses"
+                        style="@style/Widget.Material3.Button.IconButton.Filled"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginBottom="12dp"
+                        app:backgroundTint="?attr/colorSecondary"
+                        app:icon="@drawable/im_expenses"
+                        app:iconGravity="textStart"
+                        app:iconSize="36dp"
+                        app:iconTint="?attr/colorOnSecondary"
+                        android:contentDescription="Expense tracking icon" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.Material3.LabelLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expenses"
+                        android:textColor="?attr/colorOnSecondaryContainer"
+                        android:textStyle="bold"
+                        android:contentDescription="Expenses section label" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Income Navigation Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/income_nav_card"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:rippleColor="?attr/colorTertiary"
+                app:strokeWidth="2dp"
+                app:strokeColor="?attr/colorTertiaryContainer"
+                app:cardBackgroundColor="?attr/colorTertiaryContainer"
+                style="?attr/materialCardViewElevatedStyle"
+                app:layout_constraintBottom_toTopOf="@+id/reset_nav_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/expenses_nav_card"
+                app:layout_constraintTop_toTopOf="parent"
+                android:minHeight="48dp"
+                android:contentDescription="Navigate to income tracking section">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/income"
+                        style="@style/Widget.Material3.Button.IconButton.Filled"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginBottom="12dp"
+                        app:backgroundTint="?attr/colorTertiary"
+                        app:icon="@drawable/im_savings"
+                        app:iconGravity="textStart"
+                        app:iconSize="36dp"
+                        app:iconTint="?attr/colorOnTertiary"
+                        android:contentDescription="Income tracking icon" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.Material3.LabelLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Income"
+                        android:textColor="?attr/colorOnTertiaryContainer"
+                        android:textStyle="bold"
+                        android:contentDescription="Income section label" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Reports Navigation Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/reports_nav_card"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:rippleColor="?attr/colorError"
+                app:strokeWidth="2dp"
+                app:strokeColor="?attr/colorErrorContainer"
+                app:cardBackgroundColor="?attr/colorErrorContainer"
+                style="?attr/materialCardViewElevatedStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/income_reports_nav_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/budget_nav_card"
+                android:minHeight="48dp"
+                android:contentDescription="Navigate to expense reports section">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/reports"
+                        style="@style/Widget.Material3.Button.IconButton.Filled"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginBottom="12dp"
+                        app:backgroundTint="?attr/colorError"
+                        app:icon="@drawable/im_reports"
+                        app:iconGravity="textStart"
+                        app:iconSize="36dp"
+                        app:iconTint="?attr/colorOnError"
+                        android:contentDescription="Reports icon" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.Material3.LabelLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reports"
+                        android:textColor="?attr/colorOnErrorContainer"
+                        android:textStyle="bold"
+                        android:contentDescription="Reports section label" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Income Reports Navigation Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/income_reports_nav_card"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:rippleColor="?attr/colorSurfaceVariant"
+                app:strokeWidth="2dp"
+                app:strokeColor="?attr/colorSurfaceVariant"
+                app:cardBackgroundColor="?attr/colorSurfaceVariant"
+                style="?attr/materialCardViewElevatedStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/reset_nav_card"
+                app:layout_constraintStart_toEndOf="@+id/reports_nav_card"
+                app:layout_constraintTop_toBottomOf="@+id/expenses_nav_card"
+                android:minHeight="48dp"
+                android:contentDescription="Navigate to income reports section">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/incomereports"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginBottom="8dp"
+                        app:icon="@drawable/im_reports"
+                        app:iconGravity="textStart"
+                        app:iconSize="32dp"
+                        android:contentDescription="Income reports icon" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.Material3.LabelMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Income Reports"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        android:textStyle="bold"
+                        android:contentDescription="Income reports section label" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Reset/Settings Navigation Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/reset_nav_card"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:rippleColor="?attr/colorOutline"
+                app:strokeWidth="2dp"
+                app:strokeColor="?attr/colorOutline"
+                app:cardBackgroundColor="?attr/colorSurface"
+                style="?attr/materialCardViewElevatedStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/income_reports_nav_card"
+                app:layout_constraintTop_toBottomOf="@+id/income_nav_card"
+                android:minHeight="48dp"
+                android:contentDescription="Navigate to settings and reset options">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/bills"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginBottom="8dp"
+                        app:icon="@drawable/im_bills"
+                        app:iconGravity="textStart"
+                        app:iconSize="32dp"
+                        android:contentDescription="Settings and reset icon" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextAppearance.Material3.LabelLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reset"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"
+                        android:contentDescription="Reset section label" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/settings_button"
+                        style="@style/Widget.Material3.Button.IconButton.Outlined"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        app:icon="@drawable/im_bills"
+                        app:iconGravity="textStart"
+                        app:iconSize="20dp"
+                        android:contentDescription="Settings button" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

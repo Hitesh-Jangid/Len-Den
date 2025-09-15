@@ -1,0 +1,27 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#aad6ca" />
+            <corners
+                android:topLeftRadius="15dp"
+                android:topRightRadius="15dp"
+                android:bottomLeftRadius="15dp"
+                android:bottomRightRadius="15dp" />
+        </shape>
+    </item>
+    <!-- Textured area -->
+    <item android:left="3dp"
+        android:right="3dp"
+        android:top="3dp"
+        android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#aad6ca" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/black"
+                android:dashWidth="3dp"
+                android:dashGap="1dp"/>
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+</layer-list>

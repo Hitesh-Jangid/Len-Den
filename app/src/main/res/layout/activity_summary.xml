@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/book"
+    tools:context="com.hiteshjangid.lenden.SummaryActivity">
+
+    <TextView
+        android:id="@+id/summary_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/button_back_white"
+        android:text="Summary"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/sc1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summary_header"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/current_budget_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Budget: ₹ 0"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/budget_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Budget Amount: ₹ 0"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/target_saving_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Target Saving: ₹ 0"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/total_saving_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Saving: ₹ 0"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/total_income_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Income: ₹ 0"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/total_expense_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Expense: ₹ 0"
+                android:textSize="18sp" />
+
+            <!-- Add TextViews for category-wise expense and income here -->
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/Incomeview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Income Table Header -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <!-- Table rows for header -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Type"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount"
+                        android:textStyle="bold" />
+
+                    <!-- More headers if needed -->
+                </TableRow>
+
+            </TableLayout>
+
+            <!-- Income Table Content -->
+            <TableLayout
+                android:id="@+id/income_table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ScrollView for Expense Table -->
+    <ScrollView
+        android:id="@+id/expenseview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Incomeview"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Expense Table Header -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <!-- Table rows for header -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount"
+                        android:textStyle="bold" />
+
+                    <!-- More headers if needed -->
+                </TableRow>
+            </TableLayout>
+
+            <!-- Expense Table Content -->
+            <TableLayout
+                android:id="@+id/expense_table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

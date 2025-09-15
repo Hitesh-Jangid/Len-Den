@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 theme with API 27+ navigation bar feature -->
+    <style name="Theme.Lenden" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- API 27+ specific attribute -->
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <!-- Fullscreen theme with API 27+ navigation bar feature -->
+    <style name="FullscreenTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- API 27+ specific attribute -->
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

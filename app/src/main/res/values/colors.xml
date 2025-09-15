@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Legacy colors maintained for backward compatibility -->
+    <color name="colorPrimary">#6B4513</color>
+    <color name="colorPrimaryDark">#654321</color>
+    <color name="colorAccent">#8B4513</color>
+    <color name="MainBack">#FFFFFF</color>
+    <color name="theme_light">#8B4513</color>
+    <color name="text_color_secondary">#707070</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green_new">#11D853</color>
+    <color name="red_new">#FB0000</color>
+    <color name="red">#d72631</color>
+    <color name="light_blue">#a2d5c6</color>
+    <color name="medium_blue">#077b8a</color>
+    <color name="violet">#5c3c92</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="theme_accent">#FF4081</color>
+    <color name="lavender">#8692f7</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="amber_500">#FF9800</color>
+    <color name="theme_color">#654321</color>
+
+    <!-- Material 3 Color System - Book Theme -->
+    <!-- Primary colors - Warm brown inspired by book covers -->
+    <color name="md_theme_primary">#6B4513</color>
+    <color name="md_theme_on_primary">#FFFFFF</color>
+    <color name="md_theme_primary_container">#D2B48C</color>
+    <color name="md_theme_on_primary_container">#2F1B14</color>
+
+    <!-- Secondary colors - Complementary beige/tan -->
+    <color name="md_theme_secondary">#8B4513</color>
+    <color name="md_theme_on_secondary">#FFFFFF</color>
+    <color name="md_theme_secondary_container">#F4A460</color>
+    <color name="md_theme_on_secondary_container">#2F1B14</color>
+
+    <!-- Tertiary colors - Accent gold for highlights -->
+    <color name="md_theme_tertiary">#DAA520</color>
+    <color name="md_theme_on_tertiary">#FFFFFF</color>
+    <color name="md_theme_tertiary_container">#FFE4B5</color>
+    <color name="md_theme_on_tertiary_container">#2F1B14</color>
+
+    <!-- Error colors -->
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_on_error">#FFFFFF</color>
+    <color name="md_theme_error_container">#FFDAD6</color>
+    <color name="md_theme_on_error_container">#410002</color>
+
+    <!-- Surface colors - Paper-like warm whites -->
+    <color name="md_theme_surface">#FDF5E6</color>
+    <color name="md_theme_on_surface">#1C1B1F</color>
+    <color name="md_theme_surface_variant">#F5DEB3</color>
+    <color name="md_theme_on_surface_variant">#49454F</color>
+
+    <!-- Outline colors -->
+    <color name="md_theme_outline">#8B7355</color>
+    <color name="md_theme_outline_variant">#D3C4B2</color>
+
+    <!-- Inverse colors -->
+    <color name="md_theme_inverse_surface">#313033</color>
+    <color name="md_theme_inverse_on_surface">#F4EFF4</color>
+    <color name="md_theme_inverse_primary">#D0BCFF</color>
+
+    <!-- Shadow and other colors -->
+    <color name="md_theme_shadow">#000000</color>
+    <color name="md_theme_surface_tint">#6B4513</color>
+
+</resources>
